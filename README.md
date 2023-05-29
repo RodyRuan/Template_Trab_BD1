@@ -4,11 +4,11 @@ Trabalho desenvolvido durante a disciplina de BD1
 # Sumário
 
 ### 1. COMPONENTES<br>
-Integrantes do grupo<br>
-RUAN RODY DE MELO DA COSTA - RUAN-RODY@HOTMAIL.COM
-GABRIEL MOROSINI - gmorosini88@gmail.com
-LUCAS DIAS ROCHA - email_segundo_componente@dominio.com<br>
-MIGUEL MALINII - email_segundo_componente@dominio.com<br>
+
+RUAN RODY DE MELO DA COSTA - RUAN-RODY@HOTMAIL.COM\n
+GABRIEL MOROSINI - gmorosini88@gmail.com\n
+LUCAS DIAS ROCHA - email_segundo_componente@dominio.com<br>\n
+MIGUEL MALINII - email_segundo_componente@dominio.com<br>\n
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
