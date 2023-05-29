@@ -133,54 +133,79 @@ FROM
  Tabela FORNECEDOR:
 
 Campo ID: Armazena o identificador único de cada fornecedor cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
+
 Campo NOME: Armazena as informações do nome do fornecedor.
+
 Campo TELEFONE: Armazena o número de telefone do fornecedor.
+
 Campo SENHA: Armazena a senha de acesso do fornecedor ao sistema.
+
 Campo EMAIL: Armazena o endereço de email do fornecedor.
 
 Tabela PRODUTOS_CATEGORIA:
 
 Campo ID: Armazena o identificador único de cada produto cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
+
 Campo DESCRICAO: Armazena a descrição do produto.
+
 Campo VALOR: Armazena o valor do produto.
+
 Campo CATEGORIA: Armazena a categoria do produto.
 
 Tabela CLIENTE:
 
 Campo ID: Armazena o identificador único de cada cliente cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
+
 Campo NOME: Armazena as informações do nome do cliente.
+
 Campo TELEFONE: Armazena o número de telefone do cliente.
+
 Campo EMAIL: Armazena o endereço de email do cliente.
+
 Campo SENHA: Armazena a senha de acesso do cliente ao sistema.
+
 Campo ENDERECO: Armazena o endereço do cliente.
 
 Tabela COMPRA:
 
 Campo ID: Armazena o identificador único de cada compra realizada no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
+
 Campo DATA: Armazena a data da compra.
+
 Campo ID_PRODUTO: Armazena o identificador do produto comprado.
+
 Campo ID_CLIENTE: Armazena o identificador do cliente que realizou a compra.
+
 Campo ID_VENDEDOR: Armazena o identificador do fornecedor responsável pela venda.
+
 Campo NOTA: Armazena a nota ou avaliação dada pelo cliente à compra.
 
 Tabela ITEM_COMPRA:
 
 Campo FK_COMPRA_ID: Armazena o identificador da compra à qual o item pertence, estabelecendo uma relação com a tabela COMPRA.
+
 Campo FK_PRODUTOS_ID: Armazena o identificador do produto comprado, estabelecendo uma relação com a tabela PRODUTOS_CATEGORIA.
+
 Campo QTD: Armazena a quantidade do produto comprada.
 
 Tabela ADICIONA_NO_CARRINHO:
 
 Campo FK_CLIENTE_ID: Armazena o identificador do cliente que adicionou o produto ao carrinho, estabelecendo uma relação com a tabela CLIENTE.
+
 Campo FK_PRODUTOS_CATEGORIA_ID: Armazena o identificador do produto adicionado ao carrinho, estabelecendo uma relação com a tabela PRODUTOS_CATEGORIA.
+
 Campo ID_PRODUTO: Armazena o identificador do produto adicionado ao carrinho.
+
 Campo QTD: Armazena a quantidade do produto adicionada ao carrinho, indicando a quantidade de itens que o cliente deseja comprar.
 
 Tabela VENDE:
 
 Campo FK_FORNECEDOR_ID: Armazena o identificador do fornecedor responsável pela venda, estabelecendo uma relação com a tabela FORNECEDOR.
+
 Campo FK_PRODUTOS_CATEGORIA_ID: Armazena o identificador do produto vendido, estabelecendo uma relação com a tabela PRODUTOS_CATEGORIA.
+
 Campo ID_PRODUTO: Armazena o identificador do produto vendido.
+
 Campo QTD: Armazena a quantidade do produto vendida pelo fornecedor.
 
 
