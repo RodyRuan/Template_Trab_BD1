@@ -5,7 +5,7 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 
-RUAN RODY DE MELO DA COSTA - RUAN-RODY@HOTMAIL.COM
+RUAN RODY DE MELO DA COSTA - ruan_rody@hotmail.com
 
 GABRIEL MOROSINI - gmorosini88@gmail.com
 
