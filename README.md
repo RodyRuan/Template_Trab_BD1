@@ -216,6 +216,7 @@ Campo QTD: Armazena a quantidade do produto vendida pelo fornecedor.
 ### 7	MODELO FÍSICO
 
 CREATE TABLE fornecedor (
+
     id SERIAL PRIMARY KEY,
     
     nome VARCHAR(60),
@@ -228,6 +229,7 @@ CREATE TABLE fornecedor (
 );
 
 CREATE TABLE produtos_categoria (
+
     id SERIAL PRIMARY KEY,
     
     descricao VARCHAR(60),
@@ -238,6 +240,7 @@ CREATE TABLE produtos_categoria (
 );
 
 CREATE TABLE cliente (
+
     id SERIAL PRIMARY KEY,
     
     nome VARCHAR(60),
@@ -252,6 +255,7 @@ CREATE TABLE cliente (
 );
 
 CREATE TABLE compra (
+
     id SERIAL PRIMARY KEY,
     
     data DATE,
@@ -272,6 +276,7 @@ CREATE TABLE compra (
 );
 
 CREATE TABLE vende (
+
     fk_fornecedor_id INT,
     
     fk_produtos_id INT,
@@ -284,6 +289,7 @@ CREATE TABLE vende (
 );
 
 CREATE TABLE item_compra (
+
     fk_compra_id INT,
     
     fk_produtos_id INT,
@@ -298,6 +304,7 @@ CREATE TABLE item_compra (
 );
 
 CREATE TABLE adiciona_no_carrinho (
+
     fk_cliente_id INT,
     
     fk_produtos_categoria_id INT,
@@ -319,6 +326,7 @@ CREATE TABLE adiciona_no_carrinho (
 ## Inserções na tabela fornecedos
 INSERT INTO fornecedor (nome, telefone, senha, email)
 VALUES
+
     ('João Silva', '+55 11 91234-5678', 'senha123', 'joao.silva@example.com'),
     
     ('Maria Santos', '+55 21 98765-4321', 'senha456', 'maria.santos@example.com'),
@@ -342,6 +350,7 @@ VALUES
 ## Inserções na tabela produtos_categoria
 INSERT INTO produtos_categoria (descricao, valor, categoria)
 VALUES
+
     ('Camiseta Esportiva', 29.99, 'Vestuário'),
     
     ('Whey Protein', 59.99, 'Suplementos'),
@@ -365,6 +374,7 @@ VALUES
 ## Inserções na tabela cliente
 INSERT INTO cliente (nome, telefone, email, senha, endereco)
 VALUES
+
     ('Fernanda Lima', '+55 11 92345-6789', 'fernanda.lima@example.com', 'senha123', 'Rua das Flores, 123'),
     
     ('Ricardo Martins', '+55 21 99876-5432', 'ricardo.martins@example.com', 'senha456', 'Avenida Principal, 456'),
@@ -388,6 +398,7 @@ VALUES
 ## Inserções na tabela compra
 INSERT INTO compra (data, id_produto, id_cliente, id_vendedor, nota)
 VALUES
+
     ('2023-05-05', 1, 1, 1, 4.5),
     
     ('2023-05-06', 2, 1, 2, 5),
@@ -411,6 +422,7 @@ VALUES
 ## Inserções na tabela vende
 INSERT INTO vende (fk_fornecedor_id, fk_produtos_id)
 VALUES
+
     (1, 1),
     
     (2, 2),
@@ -434,6 +446,7 @@ VALUES
 ## Inserções na tabela item_compra
 INSERT INTO item_compra (fk_compra_id, fk_produtos_id, qtd)
 VALUES
+
     (1, 1, 2),
     
     (1, 2, 1),
@@ -457,6 +470,7 @@ VALUES
 ## Inserções na tabela adiciona_no_carrinho
 INSERT INTO adiciona_no_carrinho (fk_cliente_id, fk_produtos_categoria_id, id_produto, qtd)
 VALUES
+
     (1, 1, 1, 1),
     
     (1, 2, 2, 2),
