@@ -48,6 +48,7 @@ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/FitMarket.pdf
    CREATE TABLE TABELA_PRINCIPAL AS
    
 SELECT
+
     f.id AS fornecedor_id,
     
     f.nome AS fornecedor_nome,
