@@ -9,7 +9,7 @@ RUAN RODY DE MELO DA COSTA - RUAN-RODY@HOTMAIL.COM
 
 GABRIEL MOROSINI - gmorosini88@gmail.com
 
-LUCAS DIAS ROCHA - email_segundo_componente@dominio.com<br>
+LUCAS DIAS ROCHA - lucas.dias.rocha@hotmail.com
 
 MIGUEL MALINII - email_segundo_componente@dominio.com<br>
 
