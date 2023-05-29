@@ -46,42 +46,78 @@ file:///C:/Users/20212bsi0316/Downloads/FitMarket%20(1).pdf
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
    CREATE TABLE TABELA_PRINCIPAL AS
+   
 SELECT
     f.id AS fornecedor_id,
+    
     f.nome AS fornecedor_nome,
+    
     f.telefone AS fornecedor_telefone,
+    
     f.senha AS fornecedor_senha,
+    
     f.email AS fornecedor_email,
+    
     pc.id AS produtos_categoria_id,
+    
     pc.descricao AS produtos_categoria_descricao,
+    
     pc.valor AS produtos_categoria_valor,
+    
     pc.categoria AS produtos_categoria_categoria,
+    
     c.id AS cliente_id,
+    
     c.nome AS cliente_nome,
+    
     c.telefone AS cliente_telefone,
+    
     c.email AS cliente_email,
+    
     c.senha AS cliente_senha,
+    
     c.endereco AS cliente_endereco,
+    
     cp.id AS compra_id,
+    
     cp.data AS compra_data,
+    
     cp.id_produto AS compra_id_produto,
+    
     cp.id_cliente AS compra_id_cliente,
+    
     cp.id_vendedor AS compra_id_vendedor,
+    
     cp.nota AS compra_nota,
+    
     ic.fk_compra_id AS item_compra_fk_compra_id,
+    
     ic.fk_produtos_id AS item_compra_fk_produtos_id,
+    
     ic.qtd AS item_compra_qtd,
+    
     ac.fk_cliente_id AS adiciona_no_carrinho_fk_cliente_id,
+    
     ac.fk_produtos_categoria_id AS adiciona_no_carrinho_fk_produtos_categoria_id,
+    
     ac.id_produto AS adiciona_no_carrinho_id_produto,
+    
     ac.qtd AS adiciona_no_carrinho_qtd
+    
 FROM
+
     fornecedor f
+    
     JOIN vende v ON f.id = v.fk_fornecedor_id
+    
     JOIN produtos_categoria pc ON v.fk_produtos_id = pc.id
+    
     JOIN compra cp ON pc.id = cp.id_produto
+    
     JOIN cliente c ON cp.id_cliente = c.id
+    
     JOIN item_compra ic ON cp.id = ic.fk_compra_id
+    
     JOIN adiciona_no_carrinho ac ON c.id = ac.fk_cliente_id;
     
     
