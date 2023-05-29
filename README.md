@@ -130,7 +130,7 @@ FROM
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
- ##Tabela FORNECEDOR:
+ ## Tabela FORNECEDOR:
 
 Campo ID: Armazena o identificador único de cada fornecedor cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
 
@@ -142,7 +142,7 @@ Campo SENHA: Armazena a senha de acesso do fornecedor ao sistema.
 
 Campo EMAIL: Armazena o endereço de email do fornecedor.
 
-Tabela PRODUTOS_CATEGORIA:
+## Tabela PRODUTOS_CATEGORIA:
 
 Campo ID: Armazena o identificador único de cada produto cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
 
@@ -152,7 +152,7 @@ Campo VALOR: Armazena o valor do produto.
 
 Campo CATEGORIA: Armazena a categoria do produto.
 
-##Tabela CLIENTE:
+## Tabela CLIENTE:
 
 Campo ID: Armazena o identificador único de cada cliente cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
 
@@ -166,7 +166,7 @@ Campo SENHA: Armazena a senha de acesso do cliente ao sistema.
 
 Campo ENDERECO: Armazena o endereço do cliente.
 
-##Tabela COMPRA:
+## Tabela COMPRA:
 
 Campo ID: Armazena o identificador único de cada compra realizada no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
 
@@ -180,7 +180,7 @@ Campo ID_VENDEDOR: Armazena o identificador do fornecedor responsável pela vend
 
 Campo NOTA: Armazena a nota ou avaliação dada pelo cliente à compra.
 
-##Tabela ITEM_COMPRA:
+## Tabela ITEM_COMPRA:
 
 Campo FK_COMPRA_ID: Armazena o identificador da compra à qual o item pertence, estabelecendo uma relação com a tabela COMPRA.
 
@@ -188,7 +188,7 @@ Campo FK_PRODUTOS_ID: Armazena o identificador do produto comprado, estabelecend
 
 Campo QTD: Armazena a quantidade do produto comprada.
 
-Tabela ADICIONA_NO_CARRINHO:
+## Tabela ADICIONA_NO_CARRINHO:
 
 Campo FK_CLIENTE_ID: Armazena o identificador do cliente que adicionou o produto ao carrinho, estabelecendo uma relação com a tabela CLIENTE.
 
@@ -198,7 +198,7 @@ Campo ID_PRODUTO: Armazena o identificador do produto adicionado ao carrinho.
 
 Campo QTD: Armazena a quantidade do produto adicionada ao carrinho, indicando a quantidade de itens que o cliente deseja comprar.
 
-##Tabela VENDE:
+## Tabela VENDE:
 
 Campo FK_FORNECEDOR_ID: Armazena o identificador do fornecedor responsável pela venda, estabelecendo uma relação com a tabela FORNECEDOR.
 
@@ -217,166 +217,264 @@ Campo QTD: Armazena a quantidade do produto vendida pelo fornecedor.
 
 CREATE TABLE fornecedor (
     id SERIAL PRIMARY KEY,
+    
     nome VARCHAR(60),
+    
     telefone VARCHAR(60),
+    
     senha VARCHAR(60),
+    
     email VARCHAR(60)
 );
 
 CREATE TABLE produtos_categoria (
     id SERIAL PRIMARY KEY,
+    
     descricao VARCHAR(60),
+    
     valor FLOAT,
+    
     categoria VARCHAR(60)
 );
 
 CREATE TABLE cliente (
     id SERIAL PRIMARY KEY,
+    
     nome VARCHAR(60),
+    
     telefone VARCHAR(60),
+    
     email VARCHAR(60),
+    
     senha VARCHAR(60),
+    
     endereco VARCHAR(60)
 );
 
 CREATE TABLE compra (
     id SERIAL PRIMARY KEY,
+    
     data DATE,
+    
     id_produto INT,
+    
     id_cliente INT,
+    
     id_vendedor INT,
+    
     nota FLOAT,
+    
     FOREIGN KEY (id_produto) REFERENCES produtos_categoria(id),
+    
     FOREIGN KEY (id_cliente) REFERENCES cliente(id),
+    
     FOREIGN KEY (id_vendedor) REFERENCES fornecedor(id)
 );
 
 CREATE TABLE vende (
     fk_fornecedor_id INT,
+    
     fk_produtos_id INT,
-    FOREIGN KEY (fk_fornecedor_id) REFERENCES fornecedor(id),
+    
+    FOREIGN KEY (fk_fornecedor_id) REFERENCES fornecedor(id)
+    
     FOREIGN KEY (fk_produtos_id) REFERENCES produtos_categoria(id),
+    
     PRIMARY KEY (fk_fornecedor_id, fk_produtos_id)
 );
 
 CREATE TABLE item_compra (
     fk_compra_id INT,
+    
     fk_produtos_id INT,
+    
     qtd INT,
+    
     FOREIGN KEY (fk_compra_id) REFERENCES compra(id),
+    
     FOREIGN KEY (fk_produtos_id) REFERENCES produtos_categoria(id),
+    
     PRIMARY KEY (fk_compra_id, fk_produtos_id)
 );
 
 CREATE TABLE adiciona_no_carrinho (
     fk_cliente_id INT,
+    
     fk_produtos_categoria_id INT,
+    
     id_produto INT,
+    
     qtd INT,
+    
     FOREIGN KEY (fk_cliente_id) REFERENCES cliente(id),
+    
     FOREIGN KEY (fk_produtos_categoria_id) REFERENCES produtos_categoria(id),
+    
     PRIMARY KEY (fk_cliente_id, fk_produtos_categoria_id)
 );
  
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
--- Inserções na tabela fornecedos
+## Inserções na tabela fornecedos
 INSERT INTO fornecedor (nome, telefone, senha, email)
 VALUES
     ('João Silva', '+55 11 91234-5678', 'senha123', 'joao.silva@example.com'),
+    
     ('Maria Santos', '+55 21 98765-4321', 'senha456', 'maria.santos@example.com'),
+    
     ('Pedro Almeida', '+55 31 99876-5432', 'senha789', 'pedro.almeida@example.com'),
+    
     ('Ana Costa', '+55 41 98765-4321', 'senha012', 'ana.costa@example.com'),
+    
     ('Lucas Oliveira', '+55 51 91234-5678', 'senha345', 'lucas.oliveira@example.com'),
+    
     ('Bruna Ferreira', '+55 12 91234-5678', 'senha678', 'bruna.ferreira@example.com'),
+    
     ('Rafael Santos', '+55 85 98765-4321', 'senha901', 'rafael.santos@example.com'),
+    
     ('Carolina Lima', '+55 47 99876-5432', 'senha234', 'carolina.lima@example.com'),
+    
     ('Gustavo Pereira', '+55 61 91234-5678', 'senha567', 'gustavo.pereira@example.com'),
+    
     ('Amanda Souza', '+55 18 98765-4321', 'senha890', 'amanda.souza@example.com');
 
--- Inserções na tabela produtos_categoria
+## Inserções na tabela produtos_categoria
 INSERT INTO produtos_categoria (descricao, valor, categoria)
 VALUES
     ('Camiseta Esportiva', 29.99, 'Vestuário'),
+    
     ('Whey Protein', 59.99, 'Suplementos'),
+    
     ('Tênis de Corrida', 129.99, 'Calçados'),
+    
     ('Barras de Proteína', 19.99, 'Suplementos'),
+    
     ('Shorts de Academia', 39.99, 'Vestuário'),
+    
     ('Creatina', 24.99, 'Suplementos'),
+    
     ('Legging Fitness', 49.99, 'Vestuário'),
+    
     ('Luvas para Musculação', 14.99, 'Acessórios'),
+    
     ('Pré-Treino', 34.99, 'Suplementos'),
+    
     ('Corda de Pular', 9.99, 'Acessórios');
 
--- Inserções na tabela cliente
+## Inserções na tabela cliente
 INSERT INTO cliente (nome, telefone, email, senha, endereco)
 VALUES
     ('Fernanda Lima', '+55 11 92345-6789', 'fernanda.lima@example.com', 'senha123', 'Rua das Flores, 123'),
+    
     ('Ricardo Martins', '+55 21 99876-5432', 'ricardo.martins@example.com', 'senha456', 'Avenida Principal, 456'),
+    
     ('Carolina Ferreira', '+55 31 98765-4321', 'carolina.ferreira@example.com', 'senha789', 'Travessa das Ruas, 789'),
+    
     ('Marcos Oliveira', '+55 41 91234-5678', 'marcos.oliveira@example.com', 'senha012', 'Praça Central, 012'),
+    
     ('Juliana Silva', '+55 51 99876-5432', 'juliana.silva@example.com', 'senha345', 'Alameda dos Bosques, 345'),
+    
     ('Mariana Santos', '+55 12 91234-5678', 'mariana.santos@example.com', 'senha678', 'Avenida das Palmeiras, 678'),
+    
     ('Rodrigo Almeida', '+55 85 98765-4321', 'rodrigo.almeida@example.com', 'senha901', 'Rua das Montanhas, 901'),
+    
     ('Aline Costa', '+55 47 99876-5432', 'aline.costa@example.com', 'senha234', 'Travessa dos Rios, 234'),
+    
     ('Guilherme Oliveira', '+55 61 91234-5678', 'guilherme.oliveira@example.com', 'senha567', 'Alameda das Flores, 567'),
+    
     ('Isabela Souza', '+55 18 98765-4321', 'isabela.souza@example.com', 'senha890', 'Avenida dos Bosques, 890');
 
--- Inserções na tabela compra
+## Inserções na tabela compra
 INSERT INTO compra (data, id_produto, id_cliente, id_vendedor, nota)
 VALUES
     ('2023-05-05', 1, 1, 1, 4.5),
+    
     ('2023-05-06', 2, 1, 2, 5),
+    
     ('2023-05-07', 3, 2, 3, 4),
+    
     ('2023-05-08', 4, 2, 1, 3.5),
+    
     ('2023-05-09', 5, 3, 3, 4),
+    
     ('2023-05-10', 6, 3, 2, 5),
+    
     ('2023-05-11', 7, 4, 4, 4.5),
+    
     ('2023-05-12', 8, 4, 3, 4.5),
+    
     ('2023-05-13', 9, 5, 2, 4),
+    
     ('2023-05-14', 10, 5, 1, 4.5);
 
--- Inserções na tabela vende
+## Inserções na tabela vende
 INSERT INTO vende (fk_fornecedor_id, fk_produtos_id)
 VALUES
     (1, 1),
+    
     (2, 2),
+    
     (2, 3),
+    
     (3, 4),
+    
     (3, 5),
+    
     (4, 6),
+    
     (4, 7),
+    
     (5, 8),
+    
     (5, 9),
+    
     (1, 10);
 
--- Inserções na tabela item_compra
+## Inserções na tabela item_compra
 INSERT INTO item_compra (fk_compra_id, fk_produtos_id, qtd)
 VALUES
     (1, 1, 2),
+    
     (1, 2, 1),
+    
     (2, 2, 3),
+    
     (2, 3, 2),
+    
     (3, 4, 1),
+    
     (3, 5, 1),
+    
     (4, 6, 2),
+    
     (4, 7, 3),
+    
     (5, 8, 1),
+    
     (5, 9, 3);
 
--- Inserções na tabela adiciona_no_carrinho
+## Inserções na tabela adiciona_no_carrinho
 INSERT INTO adiciona_no_carrinho (fk_cliente_id, fk_produtos_categoria_id, id_produto, qtd)
 VALUES
     (1, 1, 1, 1),
+    
     (1, 2, 2, 2),
+    
     (2, 3, 3, 1),
+    
     (2, 4, 4, 3),
+    
     (3, 5, 5, 2),
+    
     (3, 6, 6, 1),
+    
     (4, 7, 7, 3),
+    
     (4, 8, 8, 1),
+    
     (5, 9, 9, 2),
+    
     (5, 10, 10, 2);
 
 
@@ -385,25 +483,25 @@ VALUES
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
---Tabela: fornecedores
+## Tabela: fornecedores
 ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/5b299264-7589-4be4-8b84-c81bbc468d3c)
 
---Tabela: produtos_categoria
+## Tabela: produtos_categoria
 ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/06267cc8-ec96-497d-bf20-d4b650ad4ea9)
 
---Tabela: cliente
+## Tabela: cliente
 ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/240deb3b-d565-467a-a34c-f927f6aa173e)
 
---Tabela: compra
+## Tabela: compra
 ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/7153f525-c0f3-4449-88bb-8a5624071d64)
 
---Tabela: vende
+## Tabela: vende
 ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/9da536e8-f973-4996-877f-4fdfc25d142b)
 
---Tabela: item_compra
+## Tabela: item_compra
 ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/93b10281-49cd-4dab-900d-4a9b7c3fb678)
 
---Tabela: adiciona_no_carrinho
+## Tabela: adiciona_no_carrinho
 ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/cfb2a64f-2cda-4d33-9bc4-d28b41b7d385)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
