@@ -11,7 +11,7 @@ GABRIEL MOROSINI - gmorosini88@gmail.com
 
 LUCAS DIAS ROCHA - lucas.dias.rocha@hotmail.com
 
-MIGUEL MALINII - email_segundo_componente@dominio.com<br>
+MIGUEL MALINII - miguel.malini5963@gmail.com
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
