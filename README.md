@@ -26,7 +26,7 @@ Este documento contém a especificação do projeto do banco de dados do FitMark
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 ![image](https://github.com/RodyRuan/Template_Trab_BD1/assets/112021384/6667f450-7be2-49d5-996c-28d76c154da6)
 
-file:///C:/Users/20212bsi0316/Downloads/FitMarket%20(1).pdf
+[file:///C:/Users/20212bsi0316/Downloads/FitMarket%20(1).pdf](https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/FitMarket.pdf)
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
 
 > A Empresa FitMarket precisa inicialmente dos seguintes relatórios:
