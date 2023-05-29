@@ -130,7 +130,7 @@ FROM
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
- Tabela FORNECEDOR:
+ ##Tabela FORNECEDOR:
 
 Campo ID: Armazena o identificador único de cada fornecedor cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
 
@@ -152,7 +152,7 @@ Campo VALOR: Armazena o valor do produto.
 
 Campo CATEGORIA: Armazena a categoria do produto.
 
-Tabela CLIENTE:
+##Tabela CLIENTE:
 
 Campo ID: Armazena o identificador único de cada cliente cadastrado no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
 
@@ -166,7 +166,7 @@ Campo SENHA: Armazena a senha de acesso do cliente ao sistema.
 
 Campo ENDERECO: Armazena o endereço do cliente.
 
-Tabela COMPRA:
+##Tabela COMPRA:
 
 Campo ID: Armazena o identificador único de cada compra realizada no sistema. Esse campo é usado como chave primária para identificar os registros na tabela.
 
@@ -180,7 +180,7 @@ Campo ID_VENDEDOR: Armazena o identificador do fornecedor responsável pela vend
 
 Campo NOTA: Armazena a nota ou avaliação dada pelo cliente à compra.
 
-Tabela ITEM_COMPRA:
+##Tabela ITEM_COMPRA:
 
 Campo FK_COMPRA_ID: Armazena o identificador da compra à qual o item pertence, estabelecendo uma relação com a tabela COMPRA.
 
@@ -198,7 +198,7 @@ Campo ID_PRODUTO: Armazena o identificador do produto adicionado ao carrinho.
 
 Campo QTD: Armazena a quantidade do produto adicionada ao carrinho, indicando a quantidade de itens que o cliente deseja comprar.
 
-Tabela VENDE:
+##Tabela VENDE:
 
 Campo FK_FORNECEDOR_ID: Armazena o identificador do fornecedor responsável pela venda, estabelecendo uma relação com a tabela FORNECEDOR.
 
