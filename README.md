@@ -5,10 +5,13 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 
-RUAN RODY DE MELO DA COSTA - RUAN-RODY@HOTMAIL.COM\n
-GABRIEL MOROSINI - gmorosini88@gmail.com\n
-LUCAS DIAS ROCHA - email_segundo_componente@dominio.com<br>\n
-MIGUEL MALINII - email_segundo_componente@dominio.com<br>\n
+RUAN RODY DE MELO DA COSTA - RUAN-RODY@HOTMAIL.COM
+
+GABRIEL MOROSINI - gmorosini88@gmail.com
+
+LUCAS DIAS ROCHA - email_segundo_componente@dominio.com<br>
+
+MIGUEL MALINII - email_segundo_componente@dominio.com<br>
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
