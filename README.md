@@ -45,81 +45,7 @@ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/FitMarket.pdf
  
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
-   CREATE TABLE TABELA_PRINCIPAL AS
    
-SELECT
-
-    f.id AS fornecedor_id,
-    
-    f.nome AS fornecedor_nome,
-    
-    f.telefone AS fornecedor_telefone,
-    
-    f.senha AS fornecedor_senha,
-    
-    f.email AS fornecedor_email,
-    
-    pc.id AS produtos_categoria_id,
-    
-    pc.descricao AS produtos_categoria_descricao,
-    
-    pc.valor AS produtos_categoria_valor,
-    
-    pc.categoria AS produtos_categoria_categoria,
-    
-    c.id AS cliente_id,
-    
-    c.nome AS cliente_nome,
-    
-    c.telefone AS cliente_telefone,
-    
-    c.email AS cliente_email,
-    
-    c.senha AS cliente_senha,
-    
-    c.endereco AS cliente_endereco,
-    
-    cp.id AS compra_id,
-    
-    cp.data AS compra_data,
-    
-    cp.id_produto AS compra_id_produto,
-    
-    cp.id_cliente AS compra_id_cliente,
-    
-    cp.id_vendedor AS compra_id_vendedor,
-    
-    cp.nota AS compra_nota,
-    
-    ic.fk_compra_id AS item_compra_fk_compra_id,
-    
-    ic.fk_produtos_id AS item_compra_fk_produtos_id,
-    
-    ic.qtd AS item_compra_qtd,
-    
-    ac.fk_cliente_id AS adiciona_no_carrinho_fk_cliente_id,
-    
-    ac.fk_produtos_categoria_id AS adiciona_no_carrinho_fk_produtos_categoria_id,
-    
-    ac.id_produto AS adiciona_no_carrinho_id_produto,
-    
-    ac.qtd AS adiciona_no_carrinho_qtd
-    
-FROM
-
-    fornecedor f
-    
-    JOIN vende v ON f.id = v.fk_fornecedor_id
-    
-    JOIN produtos_categoria pc ON v.fk_produtos_id = pc.id
-    
-    JOIN compra cp ON pc.id = cp.id_produto
-    
-    JOIN cliente c ON cp.id_cliente = c.id
-    
-    JOIN item_compra ic ON cp.id = ic.fk_compra_id
-    
-    JOIN adiciona_no_carrinho ac ON c.id = ac.fk_cliente_id;
     
     
 ### 5.MODELO CONCEITUAL
@@ -326,33 +252,31 @@ CREATE TABLE adiciona_no_carrinho (
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 ## Inserções na tabela fornecedos
 
-
-
-
+https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/Insert.sql
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 ## Tabela: fornecedores
-![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/5b299264-7589-4be4-8b84-c81bbc468d3c)
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=YiaBZc1p46u-
 
 ## Tabela: produtos_categoria
-![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/06267cc8-ec96-497d-bf20-d4b650ad4ea9)
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=yG-rHHG95DS3
 
 ## Tabela: cliente
-![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/240deb3b-d565-467a-a34c-f927f6aa173e)
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=Eo8xi7ZW5E2f
 
 ## Tabela: compra
-![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/7153f525-c0f3-4449-88bb-8a5624071d64)
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=7hyZaZpH5Euv
 
 ## Tabela: vende
-![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/9da536e8-f973-4996-877f-4fdfc25d142b)
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=DYcreVJ55Elb
 
 ## Tabela: item_compra
-![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/93b10281-49cd-4dab-900d-4a9b7c3fb678)
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=H8WabR6t5EGA
 
 ## Tabela: adiciona_no_carrinho
-![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/cfb2a64f-2cda-4d33-9bc4-d28b41b7d385)
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=EzJ-tsnP5D4v
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
