@@ -46,8 +46,8 @@ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/FitMarket.pdf
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
    
-    
-    
+ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/Tabela%20Principal%20FitMarket.xlsx   
+ 
 ### 5.MODELO CONCEITUAL
 
     ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/d691f0a8-2d04-472b-ba14-fb52ddd25d40)
