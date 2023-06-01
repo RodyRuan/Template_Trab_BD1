@@ -144,73 +144,119 @@ Canpo Descrição: Armazena a descrição de uma categoria.
 ### 7	MODELO FÍSICO
 
 CREATE TABLE FORNECEDOR (
-    id_fornecedor int PRIMARY KEY,
-    nome varchar(60),
-    telefone varchar(60),
-    senha varchar(60),
-    e_mail varchar(60)
-);
 
-CREATE TABLE CATEGORIA (
-    id_categoria int PRIMARY KEY,
-    descricao varchar(50)
+    id_fornecedor int,
+		
+    nome varchar(60),
+		
+    telefone varchar(60),
+		
+    senha varchar(60),
+		
+    e_mail varchar(60),
+		
+    PRIMARY KEY (id_fornecedor)
 );
 
 CREATE TABLE PRODUTOS (
-    id_produto int PRIMARY KEY,
+
+    id_produto int,
+		
     descricao varchar(60),
+		
     valor float,
+		
     nome varchar(60),
+		
     imagem varchar(150),
-    FK_CATEGORIA_id_categoria int,
-    FOREIGN KEY (FK_CATEGORIA_id_categoria) REFERENCES CATEGORIA(id_categoria)
+		
+    id_categoria int,
+		
+    PRIMARY KEY (id_produto),
+		
+    FOREIGN KEY (id_categoria) REFERENCES CATEGORIA (id_categoria)
 );
 
 CREATE TABLE CLIENTE (
-    id_cliente int PRIMARY KEY,
+
+    id_cliente int,
+		
     nome varchar(60),
+		
     telefone varchar(60),
+		
     email varchar(60),
+		
     senha varchar(60),
-    endereco varchar(60)
+		
+    endereco varchar(60),
+		
+    PRIMARY KEY (id_cliente)
 );
 
 CREATE TABLE COMPRA (
-    id_compra int PRIMARY KEY,
+
+    id_compra int,
+		
     data date,
-    FK_CLIENTE_id_cliente int,
+		
+    id_cliente int,
+		
     id_valiacao int,
+		
     nota float,
-    FOREIGN KEY (FK_CLIENTE_id_cliente) REFERENCES CLIENTE(id_cliente)
+		
+    PRIMARY KEY (id_compra),
+		
+    FOREIGN KEY (id_cliente) REFERENCES CLIENTE (id_cliente)
+);
+
+CREATE TABLE CATEGORIA (
+
+    id_categoria int,
+		
+    descricao varchar(50),
+		
+    PRIMARY KEY (id_categoria)
 );
 
 CREATE TABLE vende (
-    fk_FORNECEDOR_id_fornecedor int,
-    fk_PRODUTOS_id_produto int,
-    FOREIGN KEY (fk_FORNECEDOR_id_fornecedor) REFERENCES FORNECEDOR(id_fornecedor),
-    FOREIGN KEY (fk_PRODUTOS_id_produto) REFERENCES PRODUTOS(id_produto)
+
+    id_fornecedor int,
+		
+    id_produto int,
+		
+    FOREIGN KEY (id_fornecedor) REFERENCES FORNECEDOR (id_fornecedor),
+		
+    FOREIGN KEY (id_produto) REFERENCES PRODUTOS (id_produto)
 );
 
-CREATE TABLE ITEM_COMPRA (
-    fk_COMPRA_id_compra int,
-    fk_PRODUTOS_id_produto int,
+CREATE TABLE Item_compra (
+
+    id_compra int,
+		
+    id_produto int,
+		
     qtd int,
-    FOREIGN KEY (fk_COMPRA_id_compra) REFERENCES COMPRA(id_compra),
-    FOREIGN KEY (fk_PRODUTOS_id_produto) REFERENCES PRODUTOS(id_produto)
+		
+    FOREIGN KEY (id_compra) REFERENCES COMPRA (id_compra),
+		
+    FOREIGN KEY (id_produto) REFERENCES PRODUTOS (id_produto)
 );
 
-CREATE TABLE ADICIONA_NO_CARRINHO (
-    fk_CLIENTE_id_cliente int,
-    fk_PRODUTOS_id_produto int,
+CREATE TABLE adiciona_no_carrinho (
+
+    id_cliente int,
+		
+    id_produto int,
+		
     qtd int,
-    FOREIGN KEY (fk_CLIENTE_id_cliente) REFERENCES CLIENTE(id_cliente),
-    FOREIGN KEY (fk_PRODUTOS_id_produto) REFERENCES PRODUTOS(id_produto)
+		
+    FOREIGN KEY (id_cliente) REFERENCES CLIENTE (id_cliente),
+		
+    FOREIGN KEY (id_produto) REFERENCES PRODUTOS (id_produto)
+		
 );
-
-
-
- 
-        
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 ## Inserções na tabela fornecedos
