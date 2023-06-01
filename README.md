@@ -143,24 +143,30 @@ Campo QTD: Armazena a quantidade do produto vendida pelo fornecedor.
 ### 7	MODELO FÍSICO
 
 CREATE TABLE FORNECEDOR (
-    id_fornecedor int,
+    id_fornecedor int PRIMARY KEY,
     nome varchar(60),
     telefone varchar(60),
     senha varchar(60),
     e_mail varchar(60)
 );
 
+CREATE TABLE CATEGORIA (
+    id_categoria int PRIMARY KEY,
+    descricao varchar(50)
+);
+
 CREATE TABLE PRODUTOS (
-    id_produto int,
+    id_produto int PRIMARY KEY,
     descricao varchar(60),
     valor float,
     nome varchar(60),
     imagem varchar(150),
-    FK_CATEGORIA_id_categoria int
+    FK_CATEGORIA_id_categoria int,
+    FOREIGN KEY (FK_CATEGORIA_id_categoria) REFERENCES CATEGORIA(id_categoria)
 );
 
 CREATE TABLE CLIENTE (
-    id_cliente int,
+    id_cliente int PRIMARY KEY,
     nome varchar(60),
     telefone varchar(60),
     email varchar(60),
@@ -169,34 +175,37 @@ CREATE TABLE CLIENTE (
 );
 
 CREATE TABLE COMPRA (
-    id_compra int,
+    id_compra int PRIMARY KEY,
     data date,
     FK_CLIENTE_id_cliente int,
     id_valiacao int,
-    nota float
-);
-
-CREATE TABLE CATEGORIA (
-    id_categoria int,
-    descricao varchar(50)
+    nota float,
+    FOREIGN KEY (FK_CLIENTE_id_cliente) REFERENCES CLIENTE(id_cliente)
 );
 
 CREATE TABLE vende (
     fk_FORNECEDOR_id_fornecedor int,
-    fk_PRODUTOS_id_produto int
+    fk_PRODUTOS_id_produto int,
+    FOREIGN KEY (fk_FORNECEDOR_id_fornecedor) REFERENCES FORNECEDOR(id_fornecedor),
+    FOREIGN KEY (fk_PRODUTOS_id_produto) REFERENCES PRODUTOS(id_produto)
 );
 
-CREATE TABLE Item_compra (
+CREATE TABLE ITEM_COMPRA (
     fk_COMPRA_id_compra int,
     fk_PRODUTOS_id_produto int,
-    qtd int
+    qtd int,
+    FOREIGN KEY (fk_COMPRA_id_compra) REFERENCES COMPRA(id_compra),
+    FOREIGN KEY (fk_PRODUTOS_id_produto) REFERENCES PRODUTOS(id_produto)
 );
 
-CREATE TABLE adiciona_no_carrinho (
+CREATE TABLE ADICIONA_NO_CARRINHO (
     fk_CLIENTE_id_cliente int,
     fk_PRODUTOS_id_produto int,
-    qtd int
+    qtd int,
+    FOREIGN KEY (fk_CLIENTE_id_cliente) REFERENCES CLIENTE(id_cliente),
+    FOREIGN KEY (fk_PRODUTOS_id_produto) REFERENCES PRODUTOS(id_produto)
 );
+
 
 
  
