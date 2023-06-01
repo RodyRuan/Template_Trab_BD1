@@ -131,8 +131,11 @@ Campo FK_FORNECEDOR_ID: Armazena o identificador do fornecedor responsável pela
 
 Campo ID_PRODUTO: Armazena o identificador do produto vendido.
 
+## Tabela CATEGORIA:
 
+Campo ID_categoria: Armazena o id de uma categoria
 
+Canpo Descrição: Armazena a descrição de uma categoria.
 
 ### 6	MODELO LÓGICO<br>
 
