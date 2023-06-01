@@ -142,110 +142,63 @@ Campo QTD: Armazena a quantidade do produto vendida pelo fornecedor.
 
 ### 7	MODELO FÍSICO
 
-CREATE TABLE fornecedor (
-
-    id SERIAL PRIMARY KEY,
-    
-    nome VARCHAR(60),
-    
-    telefone VARCHAR(60),
-    
-    senha VARCHAR(60),
-    
-    email VARCHAR(60)
+CREATE TABLE FORNECEDOR (
+    id_fornecedor int,
+    nome varchar(60),
+    telefone varchar(60),
+    senha varchar(60),
+    e_mail varchar(60)
 );
 
-CREATE TABLE produtos_categoria (
-
-    id SERIAL PRIMARY KEY,
-    
-    descricao VARCHAR(60),
-    
-    valor FLOAT,
-    
-    categoria VARCHAR(60)
+CREATE TABLE PRODUTOS (
+    id_produto int,
+    descricao varchar(60),
+    valor float,
+    nome varchar(60),
+    imagem varchar(150),
+    FK_CATEGORIA_id_categoria int
 );
 
-CREATE TABLE cliente (
-
-    id SERIAL PRIMARY KEY,
-    
-    nome VARCHAR(60),
-    
-    telefone VARCHAR(60),
-    
-    email VARCHAR(60),
-    
-    senha VARCHAR(60),
-    
-    endereco VARCHAR(60)
+CREATE TABLE CLIENTE (
+    id_cliente int,
+    nome varchar(60),
+    telefone varchar(60),
+    email varchar(60),
+    senha varchar(60),
+    endereco varchar(60)
 );
 
-CREATE TABLE compra (
+CREATE TABLE COMPRA (
+    id_compra int,
+    data date,
+    FK_CLIENTE_id_cliente int,
+    id_valiacao int,
+    nota float
+);
 
-    id SERIAL PRIMARY KEY,
-    
-    data DATE,
-    
-    id_produto INT,
-    
-    id_cliente INT,
-    
-    id_vendedor INT,
-    
-    nota FLOAT,
-    
-    FOREIGN KEY (id_produto) REFERENCES produtos_categoria(id),
-    
-    FOREIGN KEY (id_cliente) REFERENCES cliente(id),
-    
-    FOREIGN KEY (id_vendedor) REFERENCES fornecedor(id)
+CREATE TABLE CATEGORIA (
+    id_categoria int,
+    descricao varchar(50)
 );
 
 CREATE TABLE vende (
-
-    fk_fornecedor_id INT,
-    
-    fk_produtos_id INT,
-    
-    FOREIGN KEY (fk_fornecedor_id) REFERENCES fornecedor(id)
-    
-    FOREIGN KEY (fk_produtos_id) REFERENCES produtos_categoria(id),
-    
-    PRIMARY KEY (fk_fornecedor_id, fk_produtos_id)
+    fk_FORNECEDOR_id_fornecedor int,
+    fk_PRODUTOS_id_produto int
 );
 
-CREATE TABLE item_compra (
-
-    fk_compra_id INT,
-    
-    fk_produtos_id INT,
-    
-    qtd INT,
-    
-    FOREIGN KEY (fk_compra_id) REFERENCES compra(id),
-    
-    FOREIGN KEY (fk_produtos_id) REFERENCES produtos_categoria(id),
-    
-    PRIMARY KEY (fk_compra_id, fk_produtos_id)
+CREATE TABLE Item_compra (
+    fk_COMPRA_id_compra int,
+    fk_PRODUTOS_id_produto int,
+    qtd int
 );
 
 CREATE TABLE adiciona_no_carrinho (
-
-    fk_cliente_id INT,
-    
-    fk_produtos_categoria_id INT,
-    
-    id_produto INT,
-    
-    qtd INT,
-    
-    FOREIGN KEY (fk_cliente_id) REFERENCES cliente(id),
-    
-    FOREIGN KEY (fk_produtos_categoria_id) REFERENCES produtos_categoria(id),
-    
-    PRIMARY KEY (fk_cliente_id, fk_produtos_categoria_id)
+    fk_CLIENTE_id_cliente int,
+    fk_PRODUTOS_id_produto int,
+    qtd int
 );
+
+
  
         
        
