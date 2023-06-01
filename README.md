@@ -138,7 +138,7 @@ Campo QTD: Armazena a quantidade do produto vendida pelo fornecedor.
 
 ### 6	MODELO LÓGICO<br>
 
-        ![image](https://github.com/RodyRuan/Trabalho_BD1/assets/112021384/6e049856-c012-4cb5-9990-c36f29cf462f)
+        https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/Modelo%20L%C3%B3gico.jpg
 
 ### 7	MODELO FÍSICO
 
