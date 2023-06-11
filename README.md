@@ -256,7 +256,7 @@ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/Insert.sql
 ## Tabela: fornecedores
 https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=YiaBZc1p46u-
 
-## Tabela: produtos_categoria
+## Tabela: produtos
 https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=yG-rHHG95DS3
 
 ## Tabela: cliente
@@ -271,10 +271,11 @@ https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sh
 ## Tabela: item_compra
 https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=H8WabR6t5EGA
 
-## Tabela: adiciona_no_carrinho
-https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=EzJ-tsnP5D4v
+## Tabela: categoria
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=yG-rHHG95DS3
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=UNffzOS9izB1
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
