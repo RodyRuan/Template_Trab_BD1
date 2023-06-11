@@ -20,7 +20,7 @@ Este documento contém a especificação do projeto do banco de dados do FitMark
 
 ### 3.MINI-MUNDO<br>
 
-> O FitMarket é um marketplace de academia e suplementação, é um sistema online que tem como objetivo conectar fornecedores de produtos de academia e suplementação aos consumidores que buscam esses produtos. O sistema permitirá que os fornecedores cadastrem seus produtos e os consumidores possam navegar pelo catálogo, selecionar e comprar produtos. Para que o sistema funcione corretamente, os fornecedores precisam se cadastrar na plataforma e fornecer informações sobre seus produtos, como nome, descrição, preço e imagens. Os consumidores, por sua vez, podem criar uma conta na plataforma para acessar o catálogo completo e fazer compras. Ao navegar pelo catálogo, os consumidores podem filtrar os produtos por categoria, marca, preço e outras características. Eles também podem ver avaliações e comentários de outros compradores sobre os produtos. Quando um consumidor decide fazer uma compra, ele pode adicionar os produtos ao carrinho e finalizar a compra com um sistema de pagamento seguro e confiável. Depois que a compra é confirmada, os fornecedores são notificados e enviam os produtos para a entrega. Um produto pode ser associado a vários vendedores. O FitMarket pode ser uma ótima opção para consumidores que buscam praticidade e variedade na hora de adquirir produtos de academia e suplementação, assim como para fornecedores que desejam aumentar a visibilidade e alcance de seus produtos no mercado
+> O FitMarket é um marketplace de academia e suplementação, é um sistema online que tem como objetivo conectar fornecedores de produtos de academia e suplementação aos consumidores que buscam esses produtos. O sistema permitirá que os fornecedores cadastrem seus produtos e os consumidores possam navegar pelo catálogo, selecionar e comprar produtos. Para que o sistema funcione corretamente, os fornecedores precisam se cadastrar na plataforma e fornecer informações sobre seus produtos, como nome, descrição, preço e imagens. Os consumidores, por sua vez, podem criar uma conta na plataforma para acessar o catálogo completo e fazer compras. Ao navegar pelo catálogo, os consumidores podem observar os produtos disponiveis (descrição, imagem, valor e nome). Eles também podem ver avaliações e comentários de outros compradores sobre os produtos. Quando um consumidor decide fazer uma compra, ele pode adicionar finalizar a compra com um sistema de pagamento seguro e confiável. Depois que a compra é confirmada, os fornecedores são notificados e enviam os produtos para a entrega. Um produto pode ser associado a vários vendedores. O FitMarket pode ser uma ótima opção para consumidores que buscam praticidade e variedade na hora de adquirir produtos de academia e suplementação, assim como para fornecedores que desejam aumentar a visibilidade e alcance de seus produtos no mercado
 
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
@@ -116,14 +116,6 @@ Campo FK_COMPRA_ID: Armazena o identificador da compra à qual o item pertence, 
 Campo FK_PRODUTOS_ID: Armazena o identificador do produto comprado, estabelecendo uma relação com a tabela PRODUTOS_CATEGORIA.
 
 Campo QTD: Armazena a quantidade do produto comprada.
-
-## Tabela ADICIONA_NO_CARRINHO:
-
-Campo FK_CLIENTE_ID: Armazena o identificador do cliente que adicionou o produto ao carrinho, estabelecendo uma relação com a tabela CLIENTE.
-
-Campo ID_PRODUTO: Armazena o identificador do produto adicionado ao carrinho.
-
-Campo QTD: Armazena a quantidade do produto adicionada ao carrinho, indicando a quantidade de itens que o cliente deseja comprar.
 
 ## Tabela VENDE:
 
