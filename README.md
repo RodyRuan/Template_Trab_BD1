@@ -230,7 +230,7 @@ CREATE TABLE vende (
     FOREIGN KEY (id_fornecedor) REFERENCES FORNECEDOR (id_fornecedor),
 		
     FOREIGN KEY (id_produto) REFERENCES PRODUTOS (id_produto)
-);
+); 
 
 CREATE TABLE Item_compra (
 
