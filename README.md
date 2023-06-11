@@ -136,7 +136,7 @@ Campo ID_PRODUTO: Armazena o identificador do produto vendido.
 
 Campo ID_categoria: Armazena o id de uma categoria
 
-Canpo Descrição: Armazena a descrição de uma categoria.
+Canpo Descrição: Armazena a descrição de uma categoria. 
 
 ### 6	MODELO LÓGICO<br>
 
