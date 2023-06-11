@@ -50,7 +50,7 @@ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/FitMarket.pdf
  
 ### 5.MODELO CONCEITUAL
 
-    ![image](https://github.com/RodyRuan/Template_Trab_BD1/assets/112021384/176ae913-f88f-45fb-9df9-c6e175f247f9)
+    https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/Modelo%20Conceitual.jpg
 
     
 #### 5.1 Validação do Modelo Conceitual
