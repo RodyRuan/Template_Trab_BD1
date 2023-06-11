@@ -236,20 +236,6 @@ CREATE TABLE Item_compra (
 		
     FOREIGN KEY (id_produto) REFERENCES PRODUTOS (id_produto)
 );
-
-CREATE TABLE adiciona_no_carrinho (
-
-    id_cliente int,
-		
-    id_produto int,
-		
-    qtd int,
-		
-    FOREIGN KEY (id_cliente) REFERENCES CLIENTE (id_cliente),
-		
-    FOREIGN KEY (id_produto) REFERENCES PRODUTOS (id_produto)
-		
-);
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 ## Inserções na tabela fornecedos
