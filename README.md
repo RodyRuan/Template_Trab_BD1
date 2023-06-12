@@ -290,8 +290,7 @@ https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sh
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
+    https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=POyXfquHesX6
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
 
@@ -299,15 +298,17 @@ https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sh
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 
-    a) Criar minimo 2 envolvendo algum tipo de junção
+    a) (https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=Lw3LeffEOBR4)
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
 
     a) https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=5gtS3OHz6duM
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+
+    ## Create VIEW:
+	- https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=Q05Z4unAYHda
+        - https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=6vCjUbIYbFdJ
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=WtuNFY4D3bJK
