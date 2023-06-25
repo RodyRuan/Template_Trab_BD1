@@ -54,12 +54,15 @@ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/FitMarket.pdf
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Fernanda, Maressa]:
+    
 	- Colocar atributo CNPJ em fornecedor
 	- Cliente deve estar do mesmo nível ou acima (hierarquico) de produtos;
 	- usar verbo no infinitivo nas relações;
 	- Compra deve estar no mesmo nível, ou acima (hierarquico) de produtos;
 	- Se as mudanças acima forem feitas, cliente deve estar no mesmo nível ou acima de compras
+ 
     [Grupo02]: [Perseu, João, Felipe, Renzo]:
+    
     	- Salvar cartão de c´redito
 	- Um produto possuir mais de uma categoria
 	- Criar admin para alterar as tabelas do banco de dados
