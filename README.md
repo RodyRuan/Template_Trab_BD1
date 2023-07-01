@@ -34,13 +34,14 @@ https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/FitMarket.pdf
 
 1- Relatório de vendas por fornecedor: Apresenta o total de vendas realizadas por cada fornecedor cadastrado no sistema, permitindo avaliar o desempenho de cada parceiro.
 
-2- Relatório de estoque baixo: Lista os produtos que estão com quantidade abaixo de um limite pré-definido, auxiliando na identificação de produtos que precisam ser repostos.
+2- Relatório de compras por cliente: Apresenta o total de vendas que cada cliente realizou, assim o sistema pode bonificar esse clientes para que se fidelizem
+ao marketplace
 
 3- Relatório de produtos mais vendidos: Apresenta os produtos que tiveram maior volume de vendas em um determinado período, permitindo identificar os itens mais populares entre os consumidores.
 
-4- Relatório de avaliações e comentários por produto: Exibe as avaliações e comentários dos consumidores sobre cada produto, fornecendo insights sobre a qualidade e aceitação dos produtos.
+4- Relatório de compras por categoria: Permite visualizar quais categorias estão mais em alta entre os cliente, auxiliando o vendedor a escolher quais produtos estão mais propicio a venda
 
-5- Relatório de análise de mercado: Apresenta informações sobre as tendências do mercado de academia e suplementação, como demanda por categorias de produtos, marcas mais populares e variações de preços, auxiliando na identificação de oportunidades e no planejamento estratégico.
+5- Relatório de clientes que mais gastaram:  Permite identificar os principais clientes e direcionar estratégias de marketing, visando melhorar a satisfação do cliente e impulsionar os resultados financeiros da empresa.
 
  
  
@@ -308,11 +309,11 @@ https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sh
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
 
-    ## Create VIEW:
-	- https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=Q05Z4unAYHda
-        - https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=6vCjUbIYbFdJ
-    ## Self join:
-    	- https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=L9rY8Ost-yps
+    ### Create VIEW:
+    - https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=Q05Z4unAYHda
+    - https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=6vCjUbIYbFdJ
+    ### Self join:
+    - https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=L9rY8Ost-yps
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=WtuNFY4D3bJK
@@ -321,11 +322,7 @@ https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sh
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-#### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
-#### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
-#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
-
-    
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=ux5sQO0zzta_    
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
