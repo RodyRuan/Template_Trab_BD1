@@ -317,8 +317,6 @@ https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sh
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=WtuNFY4D3bJK
 
-># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
-
 ### 10 RELATÓRIOS E GRÁFICOS
 
 https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=ux5sQO0zzta_   
@@ -332,9 +330,18 @@ Link do power point:
 
 https://1drv.ms/p/s!ApLJy1untuSSgwQmAJBztti286PJ?e=ZVYJOW
 
-># Marco de Entrega 03: Itens 10 e 11<br>
-<br>
-<br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
