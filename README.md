@@ -249,7 +249,6 @@ CREATE TABLE Item_compra (
 );
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-## Inserções na tabela fornecedos
 
 https://github.com/RodyRuan/Template_Trab_BD1/blob/master/arquivos/Insert.sql
 
