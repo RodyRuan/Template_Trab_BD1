@@ -322,7 +322,7 @@ https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sh
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=ux5sQO0zzta_    
+https://colab.research.google.com/drive/1tdJJci1PQzxJfgYW8xvyZ9u0rSTSepOR?usp=sharing#scrollTo=ux5sQO0zzta_   
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
